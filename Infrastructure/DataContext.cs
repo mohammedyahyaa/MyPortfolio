@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace TopologyAPI.Data
+namespace Infrastructure
 {
     public class DataContext : DbContext
     {

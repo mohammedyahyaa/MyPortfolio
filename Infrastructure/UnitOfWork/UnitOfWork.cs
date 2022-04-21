@@ -1,7 +1,6 @@
 ﻿using Core.Interfaces;
 using Infrastructure.Repository;
 
-using TopologyAPI.Data;
 
 namespace Infrastructure.UnitOfWork
 {

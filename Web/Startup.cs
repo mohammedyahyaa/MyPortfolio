@@ -1,3 +1,6 @@
+using Core.Interfaces;
+using Infrastructure;
+using Infrastructure.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,7 +12,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TopologyAPI.Data;
 
 namespace Web
 {
@@ -27,6 +29,9 @@ namespace Web
         {
             services.AddRazorPages();
             services.AddControllersWithViews();
+
+
+            services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
 
 
             services.AddDbContext<DataContext>
